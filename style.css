@@ -4,26 +4,26 @@
 
 /* --- Design Tokens --- */
 :root {
-    /* Colors */
-    --color-bg: #0a0e17;
-    --color-bg-secondary: #111827;
-    --color-bg-card: #1a2236;
-    --color-surface: rgba(255, 255, 255, 0.03);
-    --color-surface-hover: rgba(255, 255, 255, 0.06);
-    --color-border: rgba(255, 255, 255, 0.08);
-    --color-border-hover: rgba(255, 255, 255, 0.15);
+    /* Colors - Sea & Sand Theme */
+    --color-bg: #FFFFFF;
+    --color-bg-secondary: #F6F4EB; /* Sand */
+    --color-bg-card: #FFFFFF;
+    --color-surface: #FFFFFF;
+    --color-surface-hover: #F0F4F8; /* Light Sky */
+    --color-border: rgba(0, 0, 0, 0.06);
+    --color-border-hover: rgba(0, 0, 0, 0.12);
 
-    --color-text: #f0f2f5;
-    --color-text-secondary: #94a3b8;
-    --color-text-muted: #64748b;
+    --color-text: #172B4D; /* Deep Navy */
+    --color-text-secondary: #4A5568;
+    --color-text-muted: #718096;
 
-    --color-accent: #c9a96e;
-    --color-accent-light: #dfc291;
-    --color-accent-dark: #b08d4f;
-    --color-accent-glow: rgba(201, 169, 110, 0.15);
+    --color-accent: #027BCE; /* Ocean Blue */
+    --color-accent-light: #2BA0E2;
+    --color-accent-dark: #015E9F;
+    --color-accent-glow: rgba(2, 123, 206, 0.15);
 
-    --color-sea: #2196a4;
-    --color-sea-light: #38bec9;
+    --color-sea: #027BCE;
+    --color-sea-light: #2BA0E2;
 
     --color-whatsapp: #25d366;
 
@@ -151,7 +151,7 @@ a {
 
 .navbar.scrolled {
     padding: 12px 0;
-    background: rgba(10, 14, 23, 0.85);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--color-border);
@@ -308,11 +308,11 @@ a {
     z-index: 1;
     background: linear-gradient(
         to top,
-        rgba(10, 14, 23, 0.95) 0%,
-        rgba(10, 14, 23, 0.6) 30%,
-        rgba(10, 14, 23, 0.2) 50%,
-        rgba(10, 14, 23, 0.1) 70%,
-        rgba(10, 14, 23, 0.3) 100%
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0.6) 30%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0.1) 70%,
+        rgba(255, 255, 255, 0.8) 100%
     );
 }
 
@@ -461,13 +461,13 @@ a {
 
 .btn-primary {
     background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
-    color: var(--color-bg);
-    box-shadow: 0 4px 20px rgba(201, 169, 110, 0.3);
+    color: #FFFFFF;
+    box-shadow: 0 4px 20px rgba(2, 123, 206, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(201, 169, 110, 0.4);
+    box-shadow: 0 8px 30px rgba(2, 123, 206, 0.4);
 }
 
 .btn-outline {
@@ -621,7 +621,7 @@ a {
 .gallery-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(10, 14, 23, 0.8) 0%, transparent 60%);
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.95) 0%, transparent 75%);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -655,7 +655,7 @@ a {
     position: fixed;
     inset: 0;
     z-index: 2000;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(255, 255, 255, 0.95);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -737,13 +737,14 @@ a {
     border-radius: var(--radius-md);
     text-align: center;
     transition: all var(--transition-base);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
 }
 
 .amenity-card:hover {
     background: var(--color-surface-hover);
     border-color: var(--color-accent);
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(201, 169, 110, 0.08);
+    box-shadow: 0 12px 40px rgba(2, 123, 206, 0.15);
 }
 
 .amenity-icon {
@@ -880,7 +881,7 @@ a {
 
 .pricing-featured {
     border-color: var(--color-accent) !important;
-    background: linear-gradient(to bottom, rgba(201, 169, 110, 0.08), var(--color-surface));
+    background: linear-gradient(to bottom, rgba(2, 123, 206, 0.05), var(--color-surface));
     transform: scale(1.05);
 }
 
@@ -1156,7 +1157,7 @@ a {
 .form-group select,
 .form-group textarea {
     padding: 12px 16px;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(0, 0, 0, 0.02);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-sm);
     color: var(--color-text);
@@ -1318,7 +1319,7 @@ a {
         right: -100%;
         width: 300px;
         height: 100vh;
-        background: rgba(10, 14, 23, 0.97);
+        background: rgba(255, 255, 255, 0.97);
         backdrop-filter: blur(20px);
         flex-direction: column;
         justify-content: center;
