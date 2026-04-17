@@ -4,6 +4,31 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // ---- Main Loader & Entrance ----
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            const loader = document.getElementById('loader');
+            if (loader) {
+                loader.classList.add('hidden');
+                // Remove from DOM to keep it clean
+                setTimeout(() => loader.remove(), 1500);
+            }
+        }, 1200);
+    });
+
+    // ---- Subtle Parallax on Image Scroll ----
+    const parallaxImages = document.querySelectorAll('.about-image img, .location-image img');
+    window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY;
+        parallaxImages.forEach(img => {
+            const rect = img.getBoundingClientRect();
+            if(rect.top < window.innerHeight && rect.bottom > 0) {
+                const yPos = (rect.top - window.innerHeight/2) * -0.05;
+                img.style.transform = `translateY(${yPos}px) scale(1.02)`;
+            }
+        });
+    }, { passive: true });
+
     // ---- Navbar Scroll Effect ----
     const navbar = document.getElementById('navbar');
     const handleScroll = () => {
